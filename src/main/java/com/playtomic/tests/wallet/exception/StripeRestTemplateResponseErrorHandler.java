@@ -1,4 +1,4 @@
-package com.playtomic.tests.wallet.service;
+package com.playtomic.tests.wallet.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
@@ -11,7 +11,7 @@ public class StripeRestTemplateResponseErrorHandler extends DefaultResponseError
     @Override
     protected void handleError(ClientHttpResponse response, HttpStatus statusCode) throws IOException {
         if (statusCode == HttpStatus.UNPROCESSABLE_ENTITY) {
-            throw new StripeAmountTooSmallException();
+            throw new StripeAmountTooSmallException(response.getStatusText());
         }
 
         super.handleError(response, statusCode);

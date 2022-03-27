@@ -1,4 +1,4 @@
-# Wallets Service
+
 In Playtomic, we have a service to manage our wallets. Our players can top-up their wallets using a credit card and spend that money on the platform (bookings, racket rentals, ...)
 
 This service has the following operations:

@@ -1,0 +1,1 @@
+insert into WALLET (WALLET_ID ,BALANCE) values (1,100);
